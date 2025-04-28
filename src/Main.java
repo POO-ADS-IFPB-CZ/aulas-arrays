@@ -1,17 +1,30 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Informe a quantidade de números:");
+        int quantidade = scanner.nextInt();
+        int array[] = new int[quantidade];
 
-        int array[] = {10,8,7,3,6,4};
-        for(int i=0; i<array.length; i++){
-            System.out.println(array[i]);
-            array[i]++;
+        for(int i=0;i<quantidade;i++){
+            System.out.println("Informe o número:");
+            array[i] = scanner.nextInt();
         }
-        for(int i: array){
-            System.out.println(i);
-            i++;
-        }
-        System.out.println(array[0]);
 
+        int soma = array[0];
+        int maior = array[0];
+        int menor = array[0];
+
+        for(int i=1;i<quantidade;i++){
+            soma+=array[i];
+            if(array[i]>maior) maior = array[i];
+            if(array[i]<menor) menor = array[i];
+        }
+
+        System.out.println("Soma:"+soma);
+        System.out.println("Maior:"+maior);
+        System.out.println("Menor:"+menor);
 
     }
 }
