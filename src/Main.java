@@ -17,10 +17,12 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Informe a quantidade números: ");
         int quantidade = scanner.nextInt();
+        //TODO: Validar se quantidade é entre 6 e 10
         int numeros[] = new int[quantidade];
         for(int i=0;i<quantidade;i++){
             System.out.println("Informe o número:");
             numeros[i] = scanner.nextInt();
+            //TODO: Validar se o número é entre 0 e 60 e não duplicado
         }
         Arrays.sort(numeros);
         System.out.println("Jogo: "+Arrays.toString(numeros));
