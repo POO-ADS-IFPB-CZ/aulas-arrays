@@ -22,8 +22,7 @@ public class Main {
         System.out.println(Arrays.toString(notas));
         System.out.println("Menor: "+notas[0]);
         System.out.println("Maior: "+notas[quantidade-1]);
-        double soma = 0;
-        for(double nota: notas) soma+=nota;
-        System.out.println("Média da turma: "+(soma/quantidade));
+        System.out.println("Média da turma: "+(
+                Arrays.stream(notas).sum()/quantidade));
     }
 }
